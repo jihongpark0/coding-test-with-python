@@ -20,7 +20,7 @@ for i in range(1, v + 1):
 cycle = False
 
 for i in range(e):
-    a, b = map(int, input().split())
+    a, b = map(int, input().split()) # 간선을 입력받음(node a, node b가 연결된 간선이라는 뜻)
 
     if findParent(parent, a) == findParent(parent, b):
         cycle = True

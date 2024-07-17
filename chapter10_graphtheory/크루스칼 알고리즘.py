@@ -20,9 +20,10 @@ result = 0
 for i in range(1, v + 1):
     parent[i] = i
 
+# 모든 간선에 대한 정보 입력받기
 for _ in range(e):
-    a, b, cost = map(int, input().split())
-    edges.append((cost, a, b))
+    a, b, cost = map(int, input().split()) # node a와 node b를 연결한 간선은 cost의 비용을 가진다는 뜻
+    edges.append((cost, a, b)) # cost를 기준으로 오름차순 정렬하기 위해 cost를 맨 앞에 위치시킴
 
 edges.sort()
 
