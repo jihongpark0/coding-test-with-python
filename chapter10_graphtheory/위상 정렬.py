@@ -15,6 +15,7 @@ indegree = [0] * (v + 1)
 """
 graph = [[] for i in range(v + 1)]
 
+# 방향 그래프의 모든 간선 정보를 입력받음
 for _ in range(e):
     a, b = map(int, input().split())
     graph[a].append(b) # 정점 a에서 b로 이동
@@ -24,6 +25,7 @@ def topologySort():
     result = []
     q = deque()
 
+    # 처음 시작할 때는 진입차수가 0인 노드를 큐에 삽입
     for i in range(1, v + 1):
         if indegree[i] == 0:
             q.append(i)
